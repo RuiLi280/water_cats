@@ -32,6 +32,24 @@ INSERT INTO Team VALUES('Water', NULL, 'Database Management');
 INSERT INTO Team VALUES('Knapsack', NULL, 'Back-end');
 INSERT INTO Team VALUES('GUI', NULL, 'UI Design');
 
+CREATE TABLE Board
+(
+  boardName VARCHAR(20) NOT NULL,
+  visibility VARCHAR(10) NOT NULL,
+  background VARCHAR(50),
+  teamID INT NOT NULL,
+  PRIMARY KEY (boardName),
+  FOREIGN KEY (teamID) REFERENCES Team(teamID)
+);
+
+INSERT INTO Board values('CATS', 'Private', NULL, 1);
+INSERT INTO Board values('SATC', 'Public', NULL, 2);
+INSERT INTO Board values('TACS', 'Public', NULL, 3);
+INSERT INTO Board values('TICTACS', 'Private', NULL, 4);
+INSERT INTO Board values('Water', 'Private', NULL, 5);
+INSERT INTO Board values('Knapsack', 'Private', NULL, 6);
+INSERT INTO Board values('GUI', 'Public', NULL, 7);
+
 CREATE TABLE Person
 (
   personID INT NOT NULL AUTO_INCREMENT,
@@ -56,15 +74,28 @@ INSERT INTO Person VALUES(NULL, 'Helen', 'Gray');
 INSERT INTO Person VALUES(NULL, 'Kathryn', 'Moore');
 INSERT INTO Person VALUES(NULL, 'Amy', 'Allen');
 
-CREATE TABLE Activity
+CREATE TABLE Task
 (
-  activityDescription VARCHAR(50) NOT NULL,
-  activityDate TIMESTAMP NOT NULL,
-  activityID INT NOT NULL AUTO_INCREMENT,
+  taskID INT NOT NULL AUTO_INCREMENT,
+  priority INT NOT NULL,
+  taskStatus VARCHAR(20) NOT NULL,
+  taskDescription VARCHAR(50),
+  taskDue DATE,
+  assignDate DATE NOT NULL,
   personID INT NOT NULL,
-  PRIMARY KEY (activityID),
-  FOREIGN KEY (personID) REFERENCES Person(personID)
+  boardName VARCHAR(20) NOT NULL,
+  PRIMARY KEY (taskID),
+  FOREIGN KEY (personID) REFERENCES Person(personID),
+  FOREIGN KEY (boardName) REFERENCES Board(boardName)
 );
+
+INSERT INTO Task VALUES(NULL, 1, 'In code review', 'Create API', '2018-02-17', '2018-02-10', 7, 'CATS');
+INSERT INTO Task VALUES(NULL, 1, 'In progress', 'Code review for Task 1', '2018-02-14', '2018-02-14', 4, 'CATS');
+INSERT INTO Task VALUES(NULL, 1, 'In QA', 'Implement UI', '2018-01-20', '2018-02-10', 2, 'CATS');
+INSERT INTO Task VALUES(NULL, 1, 'Todo', 'QA for Task 3', '2018-02-15', '2018-02-10', 3, 'CATS');
+INSERT INTO Task VALUES(NULL, 1, 'Done', 'Apply changes to schema', '2018-01-06', '2018-01-05', 15, 'Water');
+INSERT INTO Task VALUES(NULL, 3, 'Todo', 'Create alternative mockups', '2018-02-20', '2018-02-13', 10, 'GUI');
+INSERT INTO Task VALUES(NULL, 4, 'In progress', 'Bug fix', '2018-02-15', '2018-02-14', 11, 'SATC');
 
 CREATE TABLE is_assigned
 (
@@ -178,41 +209,6 @@ INSERT INTO Person_email VALUES('heleng@example.com', 13);
 INSERT INTO Person_email VALUES('kathrynm@example.com', 14);
 INSERT INTO Person_email VALUES('amya@example.com', 15);
 
-CREATE TABLE Board
-(
-  boardName VARCHAR(20) NOT NULL,
-  visibility VARCHAR(10) NOT NULL,
-  background VARCHAR(50),
-  teamID INT NOT NULL,
-  activityID INT NOT NULL,
-  PRIMARY KEY (boardName),
-  FOREIGN KEY (teamID) REFERENCES Team(teamID),
-  FOREIGN KEY (activityID) REFERENCES Activity(activityID)
-);
-
-INSERT INTO Board values('Tasks', 'Private', NULL, 1);
-INSERT INTO Board values('Discussion', 'Public', NULL, 2);
-INSERT INTO Board values('Tasks', 'Private', NULL, 3);
-INSERT INTO Board values('Tasks', 'Private', NULL, 4);
-INSERT INTO Board values('Welcome', 'Public', NULL, 5);
-INSERT INTO Board values('Tasks', 'Private', NULL, 6);
-INSERT INTO Board values('Tasks', 'Private', NULL, 7);
-
-CREATE TABLE Task
-(
-  taskID INT NOT NULL AUTO_INCREMENT,
-  priority VARCHAR(10) NOT NULL,
-  taskStatus VARCHAR(20) NOT NULL,
-  taskDescription VARCHAR(50),
-  taskDue DATE,
-  assignDate DATE NOT NULL,
-  personID INT NOT NULL,
-  boardName VARCHAR(20) NOT NULL,
-  PRIMARY KEY (taskID),
-  FOREIGN KEY (personID) REFERENCES Person(personID),
-  FOREIGN KEY (boardName) REFERENCES Board(boardName)
-);
-
 CREATE TABLE Task_type
 (
   taskType VARCHAR(20) NOT NULL,
@@ -220,3 +216,10 @@ CREATE TABLE Task_type
   PRIMARY KEY (taskType, taskID),
   FOREIGN KEY (taskID) REFERENCES Task(taskID)
 );
+
+INSERT INTO Task_type VALUES('Setup',1);
+INSERT INTO Task_type VALUES('Code review', 2);
+INSERT INTO Task_type VALUES('Implementation', 3);
+INSERT INTO Task_type VALUES('QA', 4);
+INSERT INTO Task_type VALUES('Modification', 5);
+INSERT INTO Task_type VALUES('Bug', 6);
