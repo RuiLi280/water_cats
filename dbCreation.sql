@@ -53,26 +53,28 @@ INSERT INTO Board values('GUI', 'Public', NULL, 7);
 CREATE TABLE Person
 (
   personID INT NOT NULL AUTO_INCREMENT,
+  email VARCHAR(30) NOT NULL UNIQUE,
+  password CHAR(60) NOT NULL,
   firstName VARCHAR(20) NOT NULL,
   lastName VARCHAR(20) NOT NULL,
   PRIMARY KEY (personID)
 );
 
-INSERT INTO Person VALUES(NULL, 'Jason', 'Kelly');
-INSERT INTO Person VALUES(NULL, 'Arthur', 'Patterson');
-INSERT INTO Person VALUES(NULL, 'Juan', 'Jones');
-INSERT INTO Person VALUES(NULL, 'Janice', 'Jenkins');
-INSERT INTO Person VALUES(NULL, 'Adam', 'Alexander');
-INSERT INTO Person VALUES(NULL, 'Robert', 'Nelson');
-INSERT INTO Person VALUES(NULL, 'Carolyn', 'Green');
-INSERT INTO Person VALUES(NULL, 'Joyce', 'Simmons');
-INSERT INTO Person VALUES(NULL, 'Amanda', 'Butler');
-INSERT INTO Person VALUES(NULL, 'Diana', 'Henderson');
-INSERT INTO Person VALUES(NULL, 'Carol', 'Powell');
-INSERT INTO Person VALUES(NULL, 'Eric', 'Thompson');
-INSERT INTO Person VALUES(NULL, 'Helen', 'Gray');
-INSERT INTO Person VALUES(NULL, 'Kathryn', 'Moore');
-INSERT INTO Person VALUES(NULL, 'Amy', 'Allen');
+INSERT INTO Person VALUES(NULL, 'jasonk@example.com', 'password', 'Jason', 'Kelly');
+INSERT INTO Person VALUES(NULL, 'arthurp@example.com', 'password', 'Arthur', 'Patterson');
+INSERT INTO Person VALUES(NULL, 'juanj@example.com', 'password', 'Juan', 'Jones');
+INSERT INTO Person VALUES(NULL, 'janicej@example.com', 'password', 'Janice', 'Jenkins');
+INSERT INTO Person VALUES(NULL, 'adama@example.com', 'password', 'Adam', 'Alexander');
+INSERT INTO Person VALUES(NULL, 'robertn@example.com', 'password', 'Robert', 'Nelson');
+INSERT INTO Person VALUES(NULL, 'carolyng@example.com', 'password', 'Carolyn', 'Green');
+INSERT INTO Person VALUES(NULL, 'joyces@example.com', 'password', 'Joyce', 'Simmons');
+INSERT INTO Person VALUES(NULL, 'amandab@example.com', 'password', 'Amanda', 'Butler');
+INSERT INTO Person VALUES(NULL, 'dianah@example.com', 'password', 'Diana', 'Henderson');
+INSERT INTO Person VALUES(NULL, 'carolp@example.com', 'password', 'Carol', 'Powell');
+INSERT INTO Person VALUES(NULL, 'erict@example.com', 'password', 'Eric', 'Thompson');
+INSERT INTO Person VALUES(NULL, 'heleng@example.com', 'password', 'Helen', 'Gray');
+INSERT INTO Person VALUES(NULL, 'kathrynm@example.com', 'password', 'Kathryn', 'Moore');
+INSERT INTO Person VALUES(NULL, 'amya@example.com', 'password', 'Amy', 'Allen');
 
 CREATE TABLE Task
 (
@@ -184,30 +186,6 @@ INSERT INTO Person_specialization VALUES('Back-end', 12);
 INSERT INTO Person_specialization VALUES('Front-end', 13);
 INSERT INTO Person_specialization VALUES('IT', 14);
 INSERT INTO Person_specialization VALUES('Databases', 15);
-
-CREATE TABLE Person_email
-(
-  email VARCHAR(30) NOT NULL,
-  personID INT NOT NULL,
-  PRIMARY KEY (email, personID),
-  FOREIGN KEY (personID) REFERENCES Person(personID)
-);
-
-INSERT INTO Person_email VALUES('jasonk@example.com', 1);
-INSERT INTO Person_email VALUES('arthurp@example.com', 2);
-INSERT INTO Person_email VALUES('juanj@example.com', 3);
-INSERT INTO Person_email VALUES('janicej@example.com', 4);
-INSERT INTO Person_email VALUES('adama@example.com', 5);
-INSERT INTO Person_email VALUES('robertn@example.com', 6);
-INSERT INTO Person_email VALUES('carolyng@example.com', 7);
-INSERT INTO Person_email VALUES('joyces@example.com', 8);
-INSERT INTO Person_email VALUES('amandab@example.com', 9);
-INSERT INTO Person_email VALUES('dianah@example.com', 10);
-INSERT INTO Person_email VALUES('carolp@example.com', 11);
-INSERT INTO Person_email VALUES('erict@example.com', 12);
-INSERT INTO Person_email VALUES('heleng@example.com', 13);
-INSERT INTO Person_email VALUES('kathrynm@example.com', 14);
-INSERT INTO Person_email VALUES('amya@example.com', 15);
 
 CREATE TABLE Task_type
 (
