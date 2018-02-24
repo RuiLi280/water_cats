@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1bd75f86-37af-4d98-b8b6-7ca5b139ebf6" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/login.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/login.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="dbCreation.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbCreation.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <marker date="1518654746775" expanded="true" signature="81:290" ph="CREATE TABLE... Project" />
+                <marker date="1518654746775" expanded="true" signature="293:388" ph="INSERT INTO Project... " />
+                <marker date="1518654746775" expanded="true" signature="391:471" ph="INSERT INTO Project... " />
+                <marker date="1518654746775" expanded="true" signature="474:555" ph="INSERT INTO Project... " />
+                <marker date="1518654746775" expanded="true" signature="558:694" ph="CREATE TABLE... Team" />
+                <marker date="1518654746775" expanded="true" signature="697:757" ph="INSERT INTO Team... " />
+                <marker date="1518654746775" expanded="true" signature="759:809" ph="INSERT INTO Team... " />
+                <marker date="1518654746775" expanded="true" signature="811:869" ph="INSERT INTO Team... " />
+                <marker date="1518654746775" expanded="true" signature="871:922" ph="INSERT INTO Team... " />
+                <marker date="1518654746775" expanded="true" signature="924:985" ph="INSERT INTO Team... " />
+                <marker date="1518654746775" expanded="true" signature="987:1040" ph="INSERT INTO Team... " />
+                <marker date="1518654746775" expanded="true" signature="1042:1091" ph="INSERT INTO Team... " />
+                <marker date="1518654746775" expanded="true" signature="1094:1308" ph="CREATE TABLE... Board" />
+                <marker date="1518654746775" expanded="true" signature="1311:1363" ph="INSERT INTO Board... " />
+                <marker date="1518654746775" expanded="true" signature="1365:1416" ph="INSERT INTO Board... " />
+                <marker date="1518654746775" expanded="true" signature="1418:1469" ph="INSERT INTO Board... " />
+                <marker date="1518654746775" expanded="true" signature="1471:1526" ph="INSERT INTO Board... " />
+                <marker date="1518654746775" expanded="true" signature="1528:1581" ph="INSERT INTO Board... " />
+                <marker date="1518654746775" expanded="true" signature="1583:1639" ph="INSERT INTO Board... " />
+                <marker date="1518654746775" expanded="true" signature="1641:1691" ph="INSERT INTO Board... " />
+                <marker date="1518654746775" expanded="true" signature="1694:1849" ph="CREATE TABLE... Person" />
+                <marker date="1518654746775" expanded="true" signature="1852:1901" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="1903:1957" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="1959:2007" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2009:2061" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2063:2115" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2117:2168" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2170:2221" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2223:2274" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2276:2327" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2329:2382" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2384:2434" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2436:2487" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2489:2537" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2539:2590" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2592:2639" ph="INSERT INTO Person... " />
+                <marker date="1518654746775" expanded="true" signature="2642:3027" ph="CREATE TABLE... Task" />
+                <marker date="1518654746775" expanded="true" signature="3030:3133" ph="INSERT INTO Task... " />
+                <marker date="1518654746775" expanded="true" signature="3135:3247" ph="INSERT INTO Task... " />
+                <marker date="1518654746775" expanded="true" signature="3249:3345" ph="INSERT INTO Task... " />
+                <marker date="1518654746775" expanded="true" signature="3347:3443" ph="INSERT INTO Task... " />
+                <marker date="1518654746775" expanded="true" signature="3445:3553" ph="INSERT INTO Task... " />
+                <marker date="1518654746775" expanded="true" signature="3555:3664" ph="INSERT INTO Task... " />
+                <marker date="1518654746775" expanded="true" signature="3666:3764" ph="INSERT INTO Task... " />
+                <marker date="1518654746775" expanded="true" signature="3767:3983" ph="CREATE TABLE... is_assigned" />
+                <marker date="1518654746775" expanded="true" signature="3986:4022" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4024:4060" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4062:4098" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4100:4136" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4138:4174" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4176:4212" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4214:4250" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4252:4288" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4290:4326" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4328:4364" ph="INSERT INTO is_assigned... " />
+                <marker date="1518654746775" expanded="true" signature="4367:4575" ph="CREATE TABLE... includes" />
+                <marker date="1518654746775" expanded="true" signature="4578:4611" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4613:4646" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4648:4681" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4683:4716" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4718:4751" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4753:4786" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4788:4822" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4824:4858" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4860:4894" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4896:4929" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4931:4964" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="4966:4999" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5001:5035" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5037:5070" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5072:5105" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5107:5140" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5142:5176" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5178:5211" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5213:5246" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5248:5282" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5284:5318" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5320:5354" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5356:5389" ph="INSERT INTO includes... " />
+                <marker date="1518654746775" expanded="true" signature="5392:5577" ph="CREATE TABLE... Project_category" />
+                <marker date="1518654746775" expanded="true" signature="5580:5626" ph="INSERT INTO Project_category... " />
+                <marker date="1518654746775" expanded="true" signature="5628:5688" ph="INSERT INTO Project_category... " />
+                <marker date="1518654746775" expanded="true" signature="5691:5888" ph="CREATE TABLE... Person_specialization" />
+                <marker date="1518654746775" expanded="true" signature="5891:5956" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="5958:6014" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6016:6080" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6082:6137" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6139:6195" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6197:6254" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6256:6311" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6313:6368" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6370:6426" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6428:6482" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6484:6542" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6544:6600" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6602:6659" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6661:6711" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6713:6770" ph="INSERT INTO Person_specialization... " />
+                <marker date="1518654746775" expanded="true" signature="6773:6943" ph="CREATE TABLE... Person_email" />
+                <marker date="1518654746775" expanded="true" signature="6946:7002" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7004:7061" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7063:7118" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7120:7177" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7179:7234" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7236:7293" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7295:7353" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7355:7411" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7413:7470" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7472:7529" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7531:7588" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7590:7646" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7648:7705" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7707:7766" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7768:7823" ph="INSERT INTO Person_email... " />
+                <marker date="1518654746775" expanded="true" signature="7826:7989" ph="CREATE TABLE... Task_type" />
+                <marker date="1518654746775" expanded="true" signature="7992:8031" ph="INSERT INTO Task_type... " />
+                <marker date="1518654746775" expanded="true" signature="8033:8079" ph="INSERT INTO Task_type... " />
+                <marker date="1518654746775" expanded="true" signature="8081:8130" ph="INSERT INTO Task_type... " />
+                <marker date="1518654746775" expanded="true" signature="8132:8169" ph="INSERT INTO Task_type... " />
+                <marker date="1518654746775" expanded="true" signature="8171:8218" ph="INSERT INTO Task_type... " />
+                <marker date="1518654746775" expanded="true" signature="8220:8258" ph="INSERT INTO Task_type... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <folding>
+                <marker date="1519511752900" expanded="true" signature="289:324" ph="SELECT * FRO... person" />
+                <marker date="1519511752900" expanded="true" signature="289:330" ph="SELECT * FRO... person" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/login.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="174" />
+    <option name="y" value="13" />
+    <option name="width" value="1176" />
+    <option name="height" value="669" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="water_cats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="water_cats" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bd75f86-37af-4d98-b8b6-7ca5b139ebf6" name="Default" comment="" />
+      <created>1519507656161</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1519507656161</updated>
+      <workItem from="1519507659643" duration="4008000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4008000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="174" y="13" width="1176" height="669" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15948276" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/erDiagramData">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbCreation.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1518654746775" expanded="true" signature="81:290" ph="CREATE TABLE... Project" />
+            <marker date="1518654746775" expanded="true" signature="293:388" ph="INSERT INTO Project... " />
+            <marker date="1518654746775" expanded="true" signature="391:471" ph="INSERT INTO Project... " />
+            <marker date="1518654746775" expanded="true" signature="474:555" ph="INSERT INTO Project... " />
+            <marker date="1518654746775" expanded="true" signature="558:694" ph="CREATE TABLE... Team" />
+            <marker date="1518654746775" expanded="true" signature="697:757" ph="INSERT INTO Team... " />
+            <marker date="1518654746775" expanded="true" signature="759:809" ph="INSERT INTO Team... " />
+            <marker date="1518654746775" expanded="true" signature="811:869" ph="INSERT INTO Team... " />
+            <marker date="1518654746775" expanded="true" signature="871:922" ph="INSERT INTO Team... " />
+            <marker date="1518654746775" expanded="true" signature="924:985" ph="INSERT INTO Team... " />
+            <marker date="1518654746775" expanded="true" signature="987:1040" ph="INSERT INTO Team... " />
+            <marker date="1518654746775" expanded="true" signature="1042:1091" ph="INSERT INTO Team... " />
+            <marker date="1518654746775" expanded="true" signature="1094:1308" ph="CREATE TABLE... Board" />
+            <marker date="1518654746775" expanded="true" signature="1311:1363" ph="INSERT INTO Board... " />
+            <marker date="1518654746775" expanded="true" signature="1365:1416" ph="INSERT INTO Board... " />
+            <marker date="1518654746775" expanded="true" signature="1418:1469" ph="INSERT INTO Board... " />
+            <marker date="1518654746775" expanded="true" signature="1471:1526" ph="INSERT INTO Board... " />
+            <marker date="1518654746775" expanded="true" signature="1528:1581" ph="INSERT INTO Board... " />
+            <marker date="1518654746775" expanded="true" signature="1583:1639" ph="INSERT INTO Board... " />
+            <marker date="1518654746775" expanded="true" signature="1641:1691" ph="INSERT INTO Board... " />
+            <marker date="1518654746775" expanded="true" signature="1694:1849" ph="CREATE TABLE... Person" />
+            <marker date="1518654746775" expanded="true" signature="1852:1901" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="1903:1957" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="1959:2007" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2009:2061" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2063:2115" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2117:2168" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2170:2221" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2223:2274" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2276:2327" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2329:2382" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2384:2434" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2436:2487" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2489:2537" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2539:2590" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2592:2639" ph="INSERT INTO Person... " />
+            <marker date="1518654746775" expanded="true" signature="2642:3027" ph="CREATE TABLE... Task" />
+            <marker date="1518654746775" expanded="true" signature="3030:3133" ph="INSERT INTO Task... " />
+            <marker date="1518654746775" expanded="true" signature="3135:3247" ph="INSERT INTO Task... " />
+            <marker date="1518654746775" expanded="true" signature="3249:3345" ph="INSERT INTO Task... " />
+            <marker date="1518654746775" expanded="true" signature="3347:3443" ph="INSERT INTO Task... " />
+            <marker date="1518654746775" expanded="true" signature="3445:3553" ph="INSERT INTO Task... " />
+            <marker date="1518654746775" expanded="true" signature="3555:3664" ph="INSERT INTO Task... " />
+            <marker date="1518654746775" expanded="true" signature="3666:3764" ph="INSERT INTO Task... " />
+            <marker date="1518654746775" expanded="true" signature="3767:3983" ph="CREATE TABLE... is_assigned" />
+            <marker date="1518654746775" expanded="true" signature="3986:4022" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4024:4060" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4062:4098" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4100:4136" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4138:4174" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4176:4212" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4214:4250" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4252:4288" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4290:4326" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4328:4364" ph="INSERT INTO is_assigned... " />
+            <marker date="1518654746775" expanded="true" signature="4367:4575" ph="CREATE TABLE... includes" />
+            <marker date="1518654746775" expanded="true" signature="4578:4611" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4613:4646" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4648:4681" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4683:4716" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4718:4751" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4753:4786" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4788:4822" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4824:4858" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4860:4894" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4896:4929" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4931:4964" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="4966:4999" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5001:5035" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5037:5070" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5072:5105" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5107:5140" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5142:5176" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5178:5211" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5213:5246" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5248:5282" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5284:5318" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5320:5354" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5356:5389" ph="INSERT INTO includes... " />
+            <marker date="1518654746775" expanded="true" signature="5392:5577" ph="CREATE TABLE... Project_category" />
+            <marker date="1518654746775" expanded="true" signature="5580:5626" ph="INSERT INTO Project_category... " />
+            <marker date="1518654746775" expanded="true" signature="5628:5688" ph="INSERT INTO Project_category... " />
+            <marker date="1518654746775" expanded="true" signature="5691:5888" ph="CREATE TABLE... Person_specialization" />
+            <marker date="1518654746775" expanded="true" signature="5891:5956" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="5958:6014" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6016:6080" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6082:6137" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6139:6195" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6197:6254" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6256:6311" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6313:6368" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6370:6426" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6428:6482" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6484:6542" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6544:6600" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6602:6659" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6661:6711" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6713:6770" ph="INSERT INTO Person_specialization... " />
+            <marker date="1518654746775" expanded="true" signature="6773:6943" ph="CREATE TABLE... Person_email" />
+            <marker date="1518654746775" expanded="true" signature="6946:7002" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7004:7061" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7063:7118" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7120:7177" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7179:7234" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7236:7293" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7295:7353" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7355:7411" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7413:7470" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7472:7529" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7531:7588" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7590:7646" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7648:7705" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7707:7766" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7768:7823" ph="INSERT INTO Person_email... " />
+            <marker date="1518654746775" expanded="true" signature="7826:7989" ph="CREATE TABLE... Task_type" />
+            <marker date="1518654746775" expanded="true" signature="7992:8031" ph="INSERT INTO Task_type... " />
+            <marker date="1518654746775" expanded="true" signature="8033:8079" ph="INSERT INTO Task_type... " />
+            <marker date="1518654746775" expanded="true" signature="8081:8130" ph="INSERT INTO Task_type... " />
+            <marker date="1518654746775" expanded="true" signature="8132:8169" ph="INSERT INTO Task_type... " />
+            <marker date="1518654746775" expanded="true" signature="8171:8218" ph="INSERT INTO Task_type... " />
+            <marker date="1518654746775" expanded="true" signature="8220:8258" ph="INSERT INTO Task_type... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <marker date="1519511752900" expanded="true" signature="289:324" ph="SELECT * FRO... person" />
+            <marker date="1519511752900" expanded="true" signature="289:330" ph="SELECT * FRO... person" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
