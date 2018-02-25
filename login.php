@@ -24,7 +24,7 @@ try {
         if($password == $person->getPassword()) {
             session_start();
             $_SESSION['person'] = $person;
-            header("Location: http://localhost/board.html");
+            header("Location: board.html");
             exit();
         }
     }
