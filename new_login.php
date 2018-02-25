@@ -12,12 +12,8 @@
         require_once 'objects/Person.php';
         $posted = false;
         if($_POST) {
-            //$email = $_POST["email"];
-            //$password = $_POST["password"];
             $email = filter_input(INPUT_POST, "email");
             $password = filter_input(INPUT_POST,"password");
-            echo $email;
-            echo $password;
 
             try {
                 $con = new PDO("mysql:host=localhost;dbname=water_cats", "water_cats", "sesame");
@@ -26,11 +22,15 @@
                 $ps = $con->prepare($query);
                 $ps->execute(array(':email' => $email));
                 $ps->setFetchMode(PDO::FETCH_CLASS, "Person");
-                if ($person = $ps->fetch() && $password == $person->getPassword()) {
-                    session_start();
-                    $_SESSION['person'] = $person;
-                    header("Location: http://localhost/board.html");
-                    exit();
+                if($person = $ps->fetch()) {
+                    if($password == $person->getPassword()) {
+                        session_start();
+                        $_SESSION['person'] = $person;
+                        header("Location: board.html");
+                        exit();
+                    } else {
+                        $posted = true;
+                    }
                 } else {
                     $posted = true;
                 }
