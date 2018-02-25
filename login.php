@@ -28,8 +28,8 @@ try {
             exit();
         }
     }
-    print "<p>Incorrect email or password.</p>";
-    print "<button onclick='location.href=\"login.html\"'>return</button>";
+    $msg = "Email and/or password incorrect.";
+    echo "<script type='text/javascript'>alert('$msg');location.href='login.html';</script>";
 }
 catch(PDOException $ex){
     echo 'ERROR: '.$ex->getMessage();
