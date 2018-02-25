@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:300" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
 
 <body>
     <?php
+        require_once 'objects/Person.php';
+
         $email = filter_input(INPUT_POST, "email");
         $password = filter_input(INPUT_POST,"passwd");
 
         try {
-            $con = new PDO("mysql:host=localhost;dbname=water_cats","water_cats","sesame");
+            $con = new PDO("mysql:host=localhost;dbname=water_cats","michelle", "sesame");
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $query = "SELECT * FROM person WHERE email = :email";
             $ps = $con->prepare($query);
 
             $ps->execute(array(':email' => $email));
-            $data = $ps->fetchAll(PDO::FETCH_ASSOC);
+            $ps->setFetchMode(PDO::FETCH_CLASS, "Person");
 
-            if(count($data) > 0) {
-                if($password == $data[0]["password"]) {
+            if($person = $ps->fetch()) {
+                if($password == $person->getPassword()) {
+                    session_start();
+                    $_SESSION['person'] = $person;
                     header("Location: http://localhost/board.html");
                     exit();
                 }

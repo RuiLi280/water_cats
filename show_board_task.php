@@ -1,5 +1,5 @@
 <?php
-require_once 'login.php';
+
 require_once 'objects/Person.php';
 require_once 'objects/Task.php';
 
@@ -9,6 +9,7 @@ echo <<<_END
 <html>
     <head>
         <title>Tasks</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:300" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
@@ -30,13 +31,15 @@ function createTableRow(Task $t)
 
 try {
     // Connect to the database.
-    $con = new PDO("mysql:host=localhost;dbname=water_cats", $username, $password);
+    $con = new PDO("mysql:host=localhost;dbname=water_cats", "michelle", "sesame");
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $boardInput = filter_input(INPUT_POST, 'board');
-    echo $boardInput . '<br>';
 
-    print "    <table border='1'>\n";
+    session_start();
+    $person = $_SESSION['person'];
+
+    print "    <table>\n";
 
     $query = "SELECT priority, taskStatus, taskDescription, taskDue, assignDate FROM task";
 
@@ -51,8 +54,8 @@ try {
     }
     print "            </tr>\n";
 
-    //$query = "SELECT *  FROM Task WHERE personID = $person->getID() AND boardName = :boardInput";
-    $query = "SELECT priority, taskStatus, taskDescription, taskDue, assignDate FROM Task WHERE boardName = :boardInput";
+    $query = "SELECT priority, taskStatus, taskDescription, taskDue, assignDate
+                FROM Task WHERE personID = " . $person->getPersonID() . " AND boardName = :boardInput";
     
     $ps = $con->prepare($query);
     $ps->bindParam(':boardInput', $boardInput);

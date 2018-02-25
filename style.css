@@ -1,7 +1,5 @@
-.content {
-    width: 33%;
-    margin: 0 auto;
-    text-align: center;
+body, input, table, p {
+    font-family: 'Roboto', sans-serif;
 }
 h1, button {
     font-family: 'Lato', sans-serif;
@@ -11,6 +9,12 @@ h1 {
     font-size: 3em;
     color: #505160;
 }
+.content {
+    width: 33%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
 input, button {
     border: none;
 }
@@ -18,7 +22,6 @@ input {
     width: 70%;                
     border-bottom: 1px solid #2A3132;
     color: #2A3132;
-    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
 }
 input, button {
@@ -32,4 +35,12 @@ button {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1em;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #2A3132;
+    text-align: center;
+    padding: 10px;
 }
