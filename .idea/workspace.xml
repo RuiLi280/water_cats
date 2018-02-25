@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bd75f86-37af-4d98-b8b6-7ca5b139ebf6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
       <change beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
@@ -28,64 +28,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dbCreation.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbCreation.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <marker date="1519511810890" expanded="true" signature="81:290" ph="CREATE TABLE... Project" />
-                <marker date="1519511810890" expanded="true" signature="293:388" ph="INSERT INTO Project... " />
-                <marker date="1519511810890" expanded="true" signature="391:471" ph="INSERT INTO Project... " />
-                <marker date="1519511810890" expanded="true" signature="474:555" ph="INSERT INTO Project... " />
-                <marker date="1519511810890" expanded="true" signature="558:694" ph="CREATE TABLE... Team" />
-                <marker date="1519511810890" expanded="true" signature="697:757" ph="INSERT INTO Team... " />
-                <marker date="1519511810890" expanded="true" signature="759:809" ph="INSERT INTO Team... " />
-                <marker date="1519511810890" expanded="true" signature="811:869" ph="INSERT INTO Team... " />
-                <marker date="1519511810890" expanded="true" signature="871:922" ph="INSERT INTO Team... " />
-                <marker date="1519511810890" expanded="true" signature="924:985" ph="INSERT INTO Team... " />
-                <marker date="1519511810890" expanded="true" signature="987:1040" ph="INSERT INTO Team... " />
-                <marker date="1519511810890" expanded="true" signature="1042:1091" ph="INSERT INTO Team... " />
-                <marker date="1519511810890" expanded="true" signature="1094:1308" ph="CREATE TABLE... Board" />
-                <marker date="1519511810890" expanded="true" signature="1311:1363" ph="INSERT INTO Board... " />
-                <marker date="1519511810890" expanded="true" signature="1365:1416" ph="INSERT INTO Board... " />
-                <marker date="1519511810890" expanded="true" signature="1418:1469" ph="INSERT INTO Board... " />
-                <marker date="1519511810890" expanded="true" signature="1471:1526" ph="INSERT INTO Board... " />
-                <marker date="1519511810890" expanded="true" signature="1528:1581" ph="INSERT INTO Board... " />
-                <marker date="1519511810890" expanded="true" signature="1583:1639" ph="INSERT INTO Board... " />
-                <marker date="1519511810890" expanded="true" signature="1641:1691" ph="INSERT INTO Board... " />
-                <marker date="1519511810890" expanded="true" signature="1694:1758" ph="CREATE TABLE... Person" />
-                <marker date="1519511810890" expanded="true" signature="7344:7350" ph="INSERT INTO Person_email... " />
-                <marker date="1519511810890" expanded="true" signature="7353:7516" ph="CREATE TABLE... Task_type" />
-                <marker date="1519511810890" expanded="true" signature="7519:7558" ph="INSERT INTO Task_type... " />
-                <marker date="1519511810890" expanded="true" signature="7560:7606" ph="INSERT INTO Task_type... " />
-                <marker date="1519511810890" expanded="true" signature="7608:7657" ph="INSERT INTO Task_type... " />
-                <marker date="1519511810890" expanded="true" signature="7659:7696" ph="INSERT INTO Task_type... " />
-                <marker date="1519511810890" expanded="true" signature="7698:7745" ph="INSERT INTO Task_type... " />
-                <marker date="1519511810890" expanded="true" signature="7747:7785" ph="INSERT INTO Task_type... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+            <state relative-caret-position="133">
+              <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="board.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/board.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="102" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_board_task.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/show_board_task.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1012">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1519517336183" expanded="true" signature="158:355" ph="..." />
+                <marker date="1519517336183" expanded="true" signature="169:259" ph="..." />
+                <marker date="1519517336183" expanded="true" signature="270:355" ph="..." />
+                <marker date="1519517336183" expanded="true" signature="305:355" ph="..." />
+                <marker date="1519517336183" expanded="true" signature="1110:1185" ph="SELECT prior... task" />
+                <marker date="1519517336183" expanded="true" signature="1646:1751" ph="SELECT prior... Task" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state relative-caret-position="76">
+              <caret line="4" column="98" lean-forward="false" selection-start-line="4" selection-start-column="98" selection-end-line="4" selection-end-column="98" />
               <folding>
-                <marker date="1519517289449" expanded="true" signature="430:471" ph="SELECT * FRO... person" />
-                <marker date="1519517289449" expanded="true" signature="983:1042" ph="..." />
+                <marker date="1519517700345" expanded="true" signature="575:616" ph="SELECT * FRO... person" />
+                <marker date="1519517700345" expanded="true" signature="1128:1187" ph="..." />
               </folding>
             </state>
           </provider>
@@ -106,8 +103,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/login.html" />
       </list>
     </option>
   </component>
@@ -120,8 +117,8 @@
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="96" />
-    <option name="y" value="63" />
+    <option name="x" value="187" />
+    <option name="y" value="31" />
     <option name="width" value="1176" />
     <option name="height" value="669" />
   </component>
@@ -186,15 +183,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519507656161</updated>
-      <workItem from="1519507659643" duration="9548000" />
+      <workItem from="1519507659643" duration="10312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9548000" />
+    <option name="totallyTimeSpent" value="10312000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="96" y="63" width="1176" height="669" extended-state="0" />
+    <frame x="187" y="31" width="1176" height="669" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15948276" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -241,56 +238,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-19">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1519511810890" expanded="true" signature="81:290" ph="CREATE TABLE... Project" />
-            <marker date="1519511810890" expanded="true" signature="293:388" ph="INSERT INTO Project... " />
-            <marker date="1519511810890" expanded="true" signature="391:471" ph="INSERT INTO Project... " />
-            <marker date="1519511810890" expanded="true" signature="474:555" ph="INSERT INTO Project... " />
-            <marker date="1519511810890" expanded="true" signature="558:694" ph="CREATE TABLE... Team" />
-            <marker date="1519511810890" expanded="true" signature="697:757" ph="INSERT INTO Team... " />
-            <marker date="1519511810890" expanded="true" signature="759:809" ph="INSERT INTO Team... " />
-            <marker date="1519511810890" expanded="true" signature="811:869" ph="INSERT INTO Team... " />
-            <marker date="1519511810890" expanded="true" signature="871:922" ph="INSERT INTO Team... " />
-            <marker date="1519511810890" expanded="true" signature="924:985" ph="INSERT INTO Team... " />
-            <marker date="1519511810890" expanded="true" signature="987:1040" ph="INSERT INTO Team... " />
-            <marker date="1519511810890" expanded="true" signature="1042:1091" ph="INSERT INTO Team... " />
-            <marker date="1519511810890" expanded="true" signature="1094:1308" ph="CREATE TABLE... Board" />
-            <marker date="1519511810890" expanded="true" signature="1311:1363" ph="INSERT INTO Board... " />
-            <marker date="1519511810890" expanded="true" signature="1365:1416" ph="INSERT INTO Board... " />
-            <marker date="1519511810890" expanded="true" signature="1418:1469" ph="INSERT INTO Board... " />
-            <marker date="1519511810890" expanded="true" signature="1471:1526" ph="INSERT INTO Board... " />
-            <marker date="1519511810890" expanded="true" signature="1528:1581" ph="INSERT INTO Board... " />
-            <marker date="1519511810890" expanded="true" signature="1583:1639" ph="INSERT INTO Board... " />
-            <marker date="1519511810890" expanded="true" signature="1641:1691" ph="INSERT INTO Board... " />
-            <marker date="1519511810890" expanded="true" signature="1694:1758" ph="CREATE TABLE... Person" />
-            <marker date="1519511810890" expanded="true" signature="7344:7350" ph="INSERT INTO Person_email... " />
-            <marker date="1519511810890" expanded="true" signature="7353:7516" ph="CREATE TABLE... Task_type" />
-            <marker date="1519511810890" expanded="true" signature="7519:7558" ph="INSERT INTO Task_type... " />
-            <marker date="1519511810890" expanded="true" signature="7560:7606" ph="INSERT INTO Task_type... " />
-            <marker date="1519511810890" expanded="true" signature="7608:7657" ph="INSERT INTO Task_type... " />
-            <marker date="1519511810890" expanded="true" signature="7659:7696" ph="INSERT INTO Task_type... " />
-            <marker date="1519511810890" expanded="true" signature="7698:7745" ph="INSERT INTO Task_type... " />
-            <marker date="1519511810890" expanded="true" signature="7747:7785" ph="INSERT INTO Task_type... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="76">
+          <caret line="4" column="98" lean-forward="false" selection-start-line="4" selection-start-column="98" selection-end-line="4" selection-end-column="98" />
           <folding>
-            <marker date="1519517289449" expanded="true" signature="430:471" ph="SELECT * FRO... person" />
-            <marker date="1519517289449" expanded="true" signature="983:1042" ph="..." />
+            <marker date="1519517700345" expanded="true" signature="575:616" ph="SELECT * FRO... person" />
+            <marker date="1519517700345" expanded="true" signature="1128:1187" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/show_board_task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1012">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1519517336183" expanded="true" signature="158:355" ph="..." />
+            <marker date="1519517336183" expanded="true" signature="169:259" ph="..." />
+            <marker date="1519517336183" expanded="true" signature="270:355" ph="..." />
+            <marker date="1519517336183" expanded="true" signature="305:355" ph="..." />
+            <marker date="1519517336183" expanded="true" signature="1110:1185" ph="SELECT prior... task" />
+            <marker date="1519517336183" expanded="true" signature="1646:1751" ph="SELECT prior... Task" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="102" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
