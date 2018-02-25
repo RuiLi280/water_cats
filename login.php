@@ -8,37 +8,36 @@
 </head>
 
 <body>
-    <div class="content">
-        <?php
-            $email = filter_input(INPUT_POST, "email");
-            $password = filter_input(INPUT_POST,"passwd");
-
-            try {
-                $con = new PDO("mysql:host=localhost;dbname=water_cats","water_cats","sesame");
-                $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                $query = "SELECT * FROM person WHERE email = :email";
-                $ps = $con->prepare($query);
-
-                $ps->execute(array(':email' => $email));
-                $data = $ps->fetchAll(PDO::FETCH_ASSOC);
-
-                if(count($data) > 0 && $password == $data[0]["password"]) {
-                        header("Location: http://localhost/board.html");
-                        exit();
-                }
-                else {
-                    print "<p style='color:red;'>Incorrect email or password.</p>";
-                    print "<button onclick='location.href=\"login.html\"'>return</button>";
-                }
-            }
-            catch(PDOException $ex){
-                echo 'ERROR: '.$ex->getMessage();
-            }
-            catch(Exception $ex){
-                echo 'ERROR: '.$ex->getMessage();
-            }
-        ?>
-    </div>
+<div class="content">
+<?php
+require_once 'objects/Person.php';
+$email = filter_input(INPUT_POST, "email");
+$password = filter_input(INPUT_POST,"passwd");
+try {
+    $con = new PDO("mysql:host=localhost;dbname=water_cats","water_cats", "sesame");
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT * FROM person WHERE email = :email";
+    $ps = $con->prepare($query);
+    $ps->execute(array(':email' => $email));
+    $ps->setFetchMode(PDO::FETCH_CLASS, "Person");
+    if($person = $ps->fetch()) {
+        if($password == $person->getPassword()) {
+            session_start();
+            $_SESSION['person'] = $person;
+            header("Location: http://localhost/board.html");
+            exit();
+        }
+    }
+    print "<p>Incorrect email or password.</p>";
+    print "<button onclick='location.href=\"login.html\"'>return</button>";
+}
+catch(PDOException $ex){
+    echo 'ERROR: '.$ex->getMessage();
+}
+catch(Exception $ex){
+    echo 'ERROR: '.$ex->getMessage();
+}
+?>
+</div>
 </body>
 </html>
