@@ -3,40 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:300" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
 
 <body>
-    <?php
-        $email = filter_input(INPUT_POST, "email");
-        $password = filter_input(INPUT_POST,"passwd");
+    <div class="content">
+        <?php
+            $email = filter_input(INPUT_POST, "email");
+            $password = filter_input(INPUT_POST,"passwd");
 
-        try {
-            $con = new PDO("mysql:host=localhost;dbname=water_cats","water_cats","sesame");
-            $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            try {
+                $con = new PDO("mysql:host=localhost;dbname=water_cats","water_cats","sesame");
+                $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $query = "SELECT * FROM person WHERE email = :email";
-            $ps = $con->prepare($query);
+                $query = "SELECT * FROM person WHERE email = :email";
+                $ps = $con->prepare($query);
 
-            $ps->execute(array(':email' => $email));
-            $data = $ps->fetchAll(PDO::FETCH_ASSOC);
+                $ps->execute(array(':email' => $email));
+                $data = $ps->fetchAll(PDO::FETCH_ASSOC);
 
-            if(count($data) > 0) {
-                if($password == $data[0]["password"]) {
-                    header("Location: http://localhost/board.html");
-                    exit();
+                if(count($data) > 0 && $password == $data[0]["password"]) {
+                        header("Location: http://localhost/board.html");
+                        exit();
+                }
+                else {
+                    print "<p style='color:red;'>Incorrect email or password.</p>";
+                    print "<button onclick='location.href=\"login.html\"'>return</button>";
                 }
             }
-            print "<p>Incorrect email or password.</p>";
-            print "<button onclick='location.href=\"login.html\"'>return</button>";
-        }
-        catch(PDOException $ex){
-            echo 'ERROR: '.$ex->getMessage();
-        }
-        catch(Exception $ex){
-            echo 'ERROR: '.$ex->getMessage();
-        }
-    ?>
+            catch(PDOException $ex){
+                echo 'ERROR: '.$ex->getMessage();
+            }
+            catch(Exception $ex){
+                echo 'ERROR: '.$ex->getMessage();
+            }
+        ?>
+    </div>
 </body>
 </html>
