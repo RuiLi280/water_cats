@@ -38,7 +38,7 @@ CREATE TABLE Board
   visibility VARCHAR(10) NOT NULL,
   background VARCHAR(50),
   teamID INT NOT NULL,
-  PRIMARY KEY (boardName),
+  PRIMARY KEY (teamID, boardName),
   FOREIGN KEY (teamID) REFERENCES Team(teamID)
 );
 
