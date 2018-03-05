@@ -46,6 +46,7 @@ CREATE TABLE PROGRESS
   TaskComplete INT NOT NULL,
   TasksRemaining INT NOT NULL,
   ProjectPriority INT NOT NULL,
+  TotalTask INT NOT NULL,
   ProjectKey INT NOT NULL,
   TaskKey INT NOT NULL,
   FOREIGN KEY (ProjectKey) REFERENCES PROJECT(ProjectKey),
