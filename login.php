@@ -6,38 +6,68 @@
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
-
 <body>
-<div class="content">
-<?php
-require_once 'objects/Person.php';
-$email = filter_input(INPUT_POST, "email");
-$password = filter_input(INPUT_POST,"passwd");
-try {
-    $con = new PDO("mysql:host=localhost;dbname=water_cats","water_cats", "sesame");
-    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "SELECT * FROM person WHERE email = :email";
-    $ps = $con->prepare($query);
-    $ps->execute(array(':email' => $email));
-    $ps->setFetchMode(PDO::FETCH_CLASS, "Person");
-    if($person = $ps->fetch()) {
-        if($password == $person->getPassword()) {
-            session_start();
-            $_SESSION['person'] = $person;
-            header("Location: board.html");
-            exit();
+    <div class="content">
+        <?php
+        require_once 'objects/Person.php';
+        $posted = false;
+        if($_POST) {
+            $email = filter_input(INPUT_POST, "email");
+            $password = filter_input(INPUT_POST,"password");
+
+            try {
+                $con = new PDO("mysql:host=localhost;dbname=water_cats", "water_cats", "sesame");
+                $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $query = "SELECT * FROM person WHERE email = :email";
+                $ps = $con->prepare($query);
+                $ps->execute(array(':email' => $email));
+                $ps->setFetchMode(PDO::FETCH_CLASS, "Person");
+                if($person = $ps->fetch()) {
+                    if($password == $person->getPassword()) {
+                        session_start();
+                        $_SESSION['person'] = $person;
+                        header("Location: board.html");
+                        exit();
+                    } else {
+                        $posted = true;
+                    }
+                } else {
+                    $posted = true;
+                }
+
+            } catch (PDOException $ex) {
+                echo 'ERROR: ' . $ex->getMessage();
+            } catch (Exception $ex) {
+                echo 'ERROR: ' . $ex->getMessage();
+            }
         }
-    }
-    $msg = "Email and/or password incorrect.";
-    echo "<script type='text/javascript'>alert('$msg');location.href='login.html';</script>";
-}
-catch(PDOException $ex){
-    echo 'ERROR: '.$ex->getMessage();
-}
-catch(Exception $ex){
-    echo 'ERROR: '.$ex->getMessage();
-}
-?>
-</div>
+        ?>
+        <?php
+        if($posted){
+            $msg = "Email and/or password incorrect.";
+            echo "<script type='text/javascript'>alert('$msg');</script>";
+        }
+        ?>
+
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <h1>
+                Welcome!
+            </h1>
+            <p>
+                Email: <input type="text" name="email" />
+            </p>
+            <p>
+                Password: <input type="password" name="password"/>
+            </p>
+            <p>
+                <button type="submit">Login</button>
+            </p>
+        </form>
+
+    </div>
+
 </body>
 </html>
+
+
+
