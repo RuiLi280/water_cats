@@ -1,0 +1,68 @@
+CREATE TABLE CALENDAR
+(
+  CalendarKey INT NOT NULL,
+  FullDate INT NOT NULL,
+  DayOfWeek INT NOT NULL,
+  DayOfMonth INT NOT NULL,
+  Month INT NOT NULL,
+  Year INT NOT NULL,
+  Quarter INT NOT NULL,
+  PRIMARY KEY (CalendarKey)
+);
+
+CREATE TABLE PERSON
+(
+  PersonKey INT NOT NULL,
+  PersonID INT NOT NULL,
+  FirstName INT NOT NULL,
+  LastName INT NOT NULL,
+  Specialization INT NOT NULL,
+  Email INT NOT NULL,
+  PRIMARY KEY (PersonKey)
+);
+
+CREATE TABLE PROJECT
+(
+  ProjectKey INT NOT NULL,
+  ProjectID INT NOT NULL,
+  ProjectName INT NOT NULL,
+  Category INT NOT NULL,
+  PRIMARY KEY (ProjectKey)
+);
+
+CREATE TABLE TASK
+(
+  TaskKey INT NOT NULL,
+  TaskID INT NOT NULL,
+  TaskType INT NOT NULL,
+  TeamName INT NOT NULL,
+  BoardName INT NOT NULL,
+  TeamName INT NOT NULL,
+  PRIMARY KEY (TaskKey)
+);
+
+CREATE TABLE PROGRESS
+(
+  TaskComplete INT NOT NULL,
+  TasksRemaining INT NOT NULL,
+  ProjectPriority INT NOT NULL,
+  TotalTask INT NOT NULL,
+  ProjectKey INT NOT NULL,
+  TaskKey INT NOT NULL,
+  FOREIGN KEY (ProjectKey) REFERENCES PROJECT(ProjectKey),
+  FOREIGN KEY (TaskKey) REFERENCES TASK(TaskKey)
+);
+
+CREATE TABLE ACTIVITY
+(
+  Status INT NOT NULL,
+  TimeOfDay INT NOT NULL,
+  CalendarKey INT NOT NULL,
+  PersonKey INT NOT NULL,
+  TaskKey INT NOT NULL,
+  ProjectKey INT NOT NULL,
+  FOREIGN KEY (CalendarKey) REFERENCES CALENDAR(CalendarKey),
+  FOREIGN KEY (PersonKey) REFERENCES PERSON(PersonKey),
+  FOREIGN KEY (TaskKey) REFERENCES TASK(TaskKey),
+  FOREIGN KEY (ProjectKey) REFERENCES PROJECT(ProjectKey)
+);
