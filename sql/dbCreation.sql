@@ -8,13 +8,13 @@ CREATE TABLE Project
   projectID INT NOT NULL AUTO_INCREMENT,
   projectDescription VARCHAR(50),
   projectDue DATE,
-  projectStatus VARCHAR(10),
+  projectStatus INT,
   PRIMARY KEY (projectID)
 );
 
-INSERT INTO Project VALUES('Kitty Farm', NULL, 'Cat adoption center', '2018-03-14', 'Inactive'); 
-INSERT INTO Project VALUES('SeaS', NULL, 'Find water', '2018-02-17', 'Inactive'); 
-INSERT INTO Project VALUES('Jello', NULL, 'Trello hello', '2018-05-29', 'Active');
+INSERT INTO Project VALUES('Kitty Farm', NULL, 'Cat adoption center', '2018-03-14', 0); 
+INSERT INTO Project VALUES('SeaS', NULL, 'Find water', '2018-02-17', 0); 
+INSERT INTO Project VALUES('Jello', NULL, 'Trello hello', '2018-05-29', 1);
 
 CREATE TABLE Team
 (
@@ -80,7 +80,7 @@ CREATE TABLE Task
 (
   taskID INT NOT NULL AUTO_INCREMENT,
   priority INT NOT NULL,
-  taskStatus VARCHAR(20) NOT NULL,
+  taskStatus INT NOT NULL,
   taskDescription VARCHAR(50),
   taskDue DATE,
   assignDate DATE NOT NULL,
@@ -91,13 +91,13 @@ CREATE TABLE Task
   FOREIGN KEY (boardName) REFERENCES Board(boardName)
 );
 
-INSERT INTO Task VALUES(NULL, 1, 'In code review', 'Create API', '2018-02-17', '2018-02-10', 7, 'CATS');
-INSERT INTO Task VALUES(NULL, 1, 'In progress', 'Code review for Task 1', '2018-02-14', '2018-02-14', 4, 'CATS');
-INSERT INTO Task VALUES(NULL, 1, 'In QA', 'Implement UI', '2018-01-20', '2018-02-10', 2, 'CATS');
-INSERT INTO Task VALUES(NULL, 1, 'Todo', 'QA for Task 3', '2018-02-15', '2018-02-10', 3, 'CATS');
-INSERT INTO Task VALUES(NULL, 1, 'Done', 'Apply changes to schema', '2018-01-06', '2018-01-05', 15, 'Water');
-INSERT INTO Task VALUES(NULL, 3, 'Todo', 'Create alternative mockups', '2018-02-20', '2018-02-13', 10, 'GUI');
-INSERT INTO Task VALUES(NULL, 4, 'In progress', 'Bug fix', '2018-02-15', '2018-02-14', 11, 'SATC');
+INSERT INTO Task VALUES(NULL, 1, 1, 'Create API', '2018-02-17', '2018-02-10', 7, 'CATS');
+INSERT INTO Task VALUES(NULL, 1, 0, 'Code review for Task 1', '2018-02-14', '2018-02-14', 4, 'CATS');
+INSERT INTO Task VALUES(NULL, 1, 1, 'Implement UI', '2018-01-20', '2018-02-10', 2, 'CATS');
+INSERT INTO Task VALUES(NULL, 1, 0, 'QA for Task 3', '2018-02-15', '2018-02-10', 3, 'CATS');
+INSERT INTO Task VALUES(NULL, 1, 1, 'Apply changes to schema', '2018-01-06', '2018-01-05', 15, 'Water');
+INSERT INTO Task VALUES(NULL, 3, 0, 'Create alternative mockups', '2018-02-20', '2018-02-13', 10, 'GUI');
+INSERT INTO Task VALUES(NULL, 4, 1, 'Bug fix', '2018-02-15', '2018-02-14', 11, 'SATC');
 
 CREATE TABLE is_assigned
 (

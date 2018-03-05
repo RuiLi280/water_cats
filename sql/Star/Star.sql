@@ -1,45 +1,60 @@
 CREATE TABLE CALENDAR
 (
-  CalendarKey INT NOT NULL,
-  FullDate INT NOT NULL,
-  DayOfWeek INT NOT NULL,
+  CalendarKey INT NOT NULL AUTO_INCREMENT,
+  FullDate DATE NOT NULL,
+  DayOfWeek VARCHAR(10) NOT NULL,
   DayOfMonth INT NOT NULL,
-  Month INT NOT NULL,
+  Month VARCHAR(10) NOT NULL,
+  Quarter VARCHAR(2) NOT NULL,
   Year INT NOT NULL,
-  Quarter INT NOT NULL,
   PRIMARY KEY (CalendarKey)
 );
 
+INSERT INTO CALENDAR VALUES (1, '2018-01-01', 'Monday', 1, January, Q1, 2018);
+INSERT INTO CALENDAR VALUES (2, '2018-01-02', 'Tuesday', 2, January, Q1, 2018);
+
 CREATE TABLE PERSON
 (
-  PersonKey INT NOT NULL,
+  PersonKey INT NOT NULL AUTO_INCREMENT,
   PersonID INT NOT NULL,
-  FirstName INT NOT NULL,
-  LastName INT NOT NULL,
-  Specialization INT NOT NULL,
-  Email INT NOT NULL,
+  FirstName VARCHAR(20) NOT NULL,
+  LastName VARCHAR(20) NOT NULL,
+  Specialization VARCHAR(20) NOT NULL,
+  Email VARCHAR(30) NOT NULL,
   PRIMARY KEY (PersonKey)
 );
 
+INSERT INTO PERSON VALUES (NULL, 1, 'Jason', 'Kelly', 'Project Management', 'jasonk@example.com');
+INSERT INTO PERSON VALUES (NULL, 2, 'Arthur', 'Patterson', 'Front-end', 'arthurp@example.com');
+INSERT INTO PERSON VALUES (NULL, 3, 'Juan', 'Jones', 'Quality Assurance', 'juanj@example.com')
+
 CREATE TABLE PROJECT
 (
-  ProjectKey INT NOT NULL,
+  ProjectKey INT NOT NULL AUTO_INCREMENT,
   ProjectID INT NOT NULL,
-  ProjectName INT NOT NULL,
-  Category INT NOT NULL,
+  ProjectName VARCHAR(20) NOT NULL,
+  Category VARCHAR(20),
   PRIMARY KEY (ProjectKey)
 );
 
+INSERT INTO PROJECT VALUES (NULL, 1, 'Kitty Farm', 'DBMS');
+INSERT INTO PROJECT VALUES (NULL, 2, 'SeaS', NULL);
+INSERT INTO PROJECT VALUES (NULL, 3, 'Jello', 'Mobile Application')
+
 CREATE TABLE TASK
 (
-  TaskKey INT NOT NULL,
+  TaskKey INT NOT NULL AUTO_INCREMENT,
   TaskID INT NOT NULL,
-  TaskType INT NOT NULL,
-  TeamName INT NOT NULL,
-  BoardName INT NOT NULL,
-  TeamName INT NOT NULL,
+  TaskType VARCHAR(20) NOT NULL,
+  TeamName VARCHAR(20) NOT NULL,
+  BoardName VARCHAR(20) NOT NULL,
+  TeamFocus VARCHAR(20) NOT NULL,
   PRIMARY KEY (TaskKey)
 );
+
+INSERT INTO TASK VALUES (NULL, 1, 'Setup', 'CATS', 'CATS', 'Database Management');
+INSERT INTO TASK VALUES (NULL, 2, 'Code review', 'SATC', 'SATC', 'Front-end');
+INSERT INTO TASK VALUES (NULL, 3, 'Implementation', 'TACS', 'TACS', 'Quality Assurance');
 
 CREATE TABLE PROGRESS
 (
@@ -53,10 +68,14 @@ CREATE TABLE PROGRESS
   FOREIGN KEY (TaskKey) REFERENCES TASK(TaskKey)
 );
 
+INSERT INTO PROGRESS VALUES (10, 5, 2, 15, 1, 2);
+INSERT INTO PROGRESS VALUES (14, 6, 3, 20, 1, 1);
+INSERT INTO PROGRESS VALUES (2, 20, 1, 22, 2, 2);
+
 CREATE TABLE ACTIVITY
 (
   Status INT NOT NULL,
-  TimeOfDay INT NOT NULL,
+  TimeOfDay TIMESTAMP NOT NULL,
   CalendarKey INT NOT NULL,
   PersonKey INT NOT NULL,
   TaskKey INT NOT NULL,
@@ -66,3 +85,6 @@ CREATE TABLE ACTIVITY
   FOREIGN KEY (TaskKey) REFERENCES TASK(TaskKey),
   FOREIGN KEY (ProjectKey) REFERENCES PROJECT(ProjectKey)
 );
+
+INSERT INTO ACTIVITY VALUES (0, '2018-01-01 10:10:10', 1, 2, 2, 2);
+INSERT INTO ACTIVITY VALUES (1, '2018-01-02 12:01:00', 2, 1, 1, 3);
