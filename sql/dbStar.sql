@@ -1,0 +1,95 @@
+DROP DATABASE IF EXISTS water_cats_star;
+CREATE DATABASE water_cats_star;
+USE water_cats_star;
+
+CREATE TABLE CALENDAR
+(
+  CalendarKey INT NOT NULL AUTO_INCREMENT,
+  FullDate DATE NOT NULL,
+  DayOfWeek VARCHAR(10) NOT NULL,
+  DayOfMonth INT NOT NULL,
+  Month VARCHAR(10) NOT NULL,
+  Quarter VARCHAR(2) NOT NULL,
+  Year INT NOT NULL,
+  PRIMARY KEY (CalendarKey)
+);
+
+INSERT INTO CALENDAR VALUES (1, '2018-01-01', 'Monday', 1, 'January', 'Q1', 2018);
+INSERT INTO CALENDAR VALUES (2, '2018-01-02', 'Tuesday', 2, 'January', 'Q1', 2018);
+
+CREATE TABLE PERSON
+(
+  PersonKey INT NOT NULL AUTO_INCREMENT,
+  PersonID INT NOT NULL,
+  FirstName VARCHAR(20) NOT NULL,
+  LastName VARCHAR(20) NOT NULL,
+  Specialization VARCHAR(20) NOT NULL,
+  Email VARCHAR(30) NOT NULL,
+  PRIMARY KEY (PersonKey)
+);
+
+INSERT INTO PERSON VALUES (NULL, 1, 'Jason', 'Kelly', 'Project Management', 'jasonk@example.com');
+INSERT INTO PERSON VALUES (NULL, 2, 'Arthur', 'Patterson', 'Front-end', 'arthurp@example.com');
+INSERT INTO PERSON VALUES (NULL, 3, 'Juan', 'Jones', 'Quality Assurance', 'juanj@example.com');
+
+CREATE TABLE PROJECT
+(
+  ProjectKey INT NOT NULL AUTO_INCREMENT,
+  ProjectID INT NOT NULL,
+  ProjectName VARCHAR(20) NOT NULL,
+  Category VARCHAR(20),
+  PRIMARY KEY (ProjectKey)
+);
+
+INSERT INTO PROJECT VALUES (NULL, 1, 'Kitty Farm', 'DBMS');
+INSERT INTO PROJECT VALUES (NULL, 2, 'SeaS', "Web");
+INSERT INTO PROJECT VALUES (NULL, 3, 'Jello', 'Mobile Application');
+
+CREATE TABLE TASK
+(
+  TaskKey INT NOT NULL AUTO_INCREMENT,
+  TaskID INT NOT NULL,
+  TaskType VARCHAR(20) NOT NULL,
+  TeamName VARCHAR(20) NOT NULL,
+  BoardName VARCHAR(20) NOT NULL,
+  TeamFocus VARCHAR(20) NOT NULL,
+  PRIMARY KEY (TaskKey)
+);
+
+INSERT INTO TASK VALUES (NULL, 1, 'Setup', 'CATS', 'CATS', 'Database Management');
+INSERT INTO TASK VALUES (NULL, 2, 'Code review', 'SATC', 'SATC', 'Front-end');
+INSERT INTO TASK VALUES (NULL, 3, 'Implementation', 'TACS', 'TACS', 'Quality Assurance');
+
+CREATE TABLE PROGRESSPROJECT
+(
+  TaskComplete INT NOT NULL,
+  TasksRemaining INT NOT NULL,
+  TotalTask INT NOT NULL,
+  ProjectKey INT NOT NULL,
+  TaskKey INT NOT NULL,
+  FOREIGN KEY (ProjectKey) REFERENCES PROJECT(ProjectKey),
+  FOREIGN KEY (TaskKey) REFERENCES TASK(TaskKey)
+);
+
+INSERT INTO PROGRESSPROJECT VALUES (10, 5, 15, 1, 2);
+INSERT INTO PROGRESSPROJECT VALUES (14, 6, 20, 1, 1);
+INSERT INTO PROGRESSPROJECT VALUES (2, 20, 22, 2, 2);
+
+CREATE TABLE PROGRESSTASK
+(
+  Status INT NOT NULL,
+  TimeOfDay TIMESTAMP NOT NULL,
+  TaskComplete INT NOT NULL,
+  TasksRemaining INT NOT NULL,
+  CalendarKey INT NOT NULL,
+  PersonKey INT NOT NULL,
+  TaskKey INT NOT NULL,
+  ProjectKey INT NOT NULL,
+  FOREIGN KEY (CalendarKey) REFERENCES CALENDAR(CalendarKey),
+  FOREIGN KEY (PersonKey) REFERENCES PERSON(PersonKey),
+  FOREIGN KEY (TaskKey) REFERENCES TASK(TaskKey),
+  FOREIGN KEY (ProjectKey) REFERENCES PROJECT(ProjectKey)
+);
+
+INSERT INTO PROGRESSTASK VALUES (0, '2018-01-01 10:10:10', 0, 1, 1, 2, 2, 2);
+INSERT INTO PROGRESSTASK VALUES (1, '2018-01-02 12:01:00', 1, 0, 2, 1, 1, 3);
