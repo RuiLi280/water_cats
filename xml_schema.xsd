@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--complex type: empty element -->
+    <xs:complexType name="person_type">
+        <xs:attribute name="first_name" type="xs:string"/>
+        <xs:attribute name="last_name" type="xs:string"/>
+    </xs:complexType>
+    <xs:element name="person" type="person_type"/>
+    
+    <!--complex type: element only -->
+    <xs:complexType name="task_type">
+        <xs:sequence>
+            <xs:element ref="person"/>
+            <xs:element name="task_name" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="status">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="To Do"/>
+                    <xs:enumeration value="In Progress"/>
+                    <xs:enumeration value="In Review"/>
+                    <xs:enumeration value="In QA"/>
+                    <xs:enumeration value="Done"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="priority">
+            <xs:simpleType>
+                <xs:restriction base="xs:int">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="5"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:element name="task" type="task_type"/>
+    
+    <!--complex type: text only -->
+    <xs:complexType name="description_type" >
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="team_name" type="xs:string"/>
+                <xs:attribute name="team_focus" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="description" type="description_type"/>
+    
+    <!--complex type: mixed content -->
+    <xs:complexType name="board_type" mixed="true">
+        <xs:sequence>
+            <xs:element ref="description"/>
+            <xs:element ref="task" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="board_name" type="xs:string"/>
+        <xs:attribute name="visibility">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Private"/>
+                    <xs:enumeration value="Public"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:element name="board" type="board_type"/>
+    
+    <!--complex type: element only -->
+    <xs:complexType name="project_type">
+        <xs:sequence>
+            <xs:element ref="board" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="project" type="project_type"/>
+</xs:schema>
