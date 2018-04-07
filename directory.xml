@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<directory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <person gender="male" first_name="Jason" last_name="Kelly">
+        <email>jkelly@sjsu.edu</email>
+    </person>
+    <person gender="male" first_name="Arthur" last_name="Patterson">
+        <email>apatterson@mac.com</email>
+    </person>
+    <person gender="female" first_name="Janice" last_name="Jenkinson">
+        <email>jjenkinson@gmail.com</email>
+    </person>
+    <person gender="male" first_name="Adam" last_name="Alexandar">
+        <email>aalexandar@gmail.com</email>
+    </person>
+    <person gender="male" first_name="Robert" last_name="Nelson">
+        <email>rnelson@gmail.com</email>
+    </person>
+</directory>

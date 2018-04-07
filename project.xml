@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xml_schema.xsd">
+    <board board_name="Water" visibility="Public">
+        Description:
+        <description team_name="Water" team_focus="Database Management">
+            This is a great team! So environmentally friendly.
+        </description>
+        The tasks will be
+        <task status="To Do" priority="1">
+            <person first_name="Jason" last_name="Kelly"/>
+            <task_name>Create tables</task_name>
+        </task>
+        and
+        <task status="In Progress" priority="2">
+            <person first_name="Arthur" last_name="Patterson"/>
+            <task_name>Create triggers</task_name>
+        </task>
+        and
+        <task status="In Review" priority="3">
+            <person first_name="Janice" last_name="Jenkinson"/>
+            <task_name>Create ER Diagram</task_name>
+        </task>
+    </board>
+    <board board_name="CATS" visibility="Private">
+        Description:
+        <description team_name="CATS" team_focus="Web Development">
+            Meow! There are cats everywhere!
+        </description>
+        The tasks will be 
+        <task status="In QA" priority="4">
+            <person first_name="Adam" last_name="Alexandar"/>
+            <task_name>Homepage</task_name>
+        </task>
+        and 
+        <task status="Done" priority="5">
+            <person first_name="Robert" last_name="Nelson"/>
+            <task_name>Login</task_name>
+        </task>
+    </board>
+</project>
