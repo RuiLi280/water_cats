@@ -15,4 +15,7 @@
     <person gender="male" first_name="Robert" last_name="Nelson">
         <email>rnelson@gmail.com</email>
     </person>
+    <person gender="male" first_name="Ron" last_name="Mak">
+        <email>notronmak@gmail.com</email>
+    </person>
 </directory>
