@@ -37,4 +37,15 @@
             <task_name>Login</task_name>
         </task>
     </board>
+    <board board_name="Water Cats" visibility="Public">
+        Description:
+        <description team_name="Water Cats" team_focus="Backend Development"> 
+            There is water on these cats!
+        </description>
+        The tasks will be
+        <task status="Done" priority="1">
+            <person first_name="Ron" last_name="Mak"/>
+            <task_name>Assignment 5</task_name>
+        </task>
+    </board>
 </project>
