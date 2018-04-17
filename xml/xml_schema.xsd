@@ -11,9 +11,11 @@
     <xs:complexType name="task_type">
         <xs:sequence>
             <xs:element ref="person"/>
+            <!--simple type-->
             <xs:element name="task_name" type="xs:string"/>
         </xs:sequence>
         <xs:attribute name="status">
+            <!--simple type-->
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="To Do"/>
@@ -25,6 +27,7 @@
             </xs:simpleType>
         </xs:attribute>
         <xs:attribute name="priority">
+            <!--simple type-->
             <xs:simpleType>
                 <xs:restriction base="xs:int">
                     <xs:minInclusive value="1"/>
@@ -54,6 +57,7 @@
         </xs:sequence>
         <xs:attribute name="board_name" type="xs:string"/>
         <xs:attribute name="visibility">
+            <!--simple type-->
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="Private"/>
