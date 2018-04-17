@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    form#formAddTask(name="addtask",method="post",action="/addtask")
+        h1= title
+        label(for="inputTaskName") NAME
+        br
+        input#inputTaskName(type="text", placeholder="Enter name", name="taskname")
+        br
+        label(for="inputTaskStatus") STATUS
+        br
+        input#inputTaskStatus(type="text", placeholder="Enter status", name="taskstatus")
+        br
+        label(for="inputTaskPriority") PRIORITY
+        br
+        input#inputTaskPriority(type="text", placeholder="Enter priority", name="taskpriority")
+        br
+        button#btnSubmit(type="submit") Submit

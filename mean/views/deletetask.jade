@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1 Delete Task
+    p OK to delete #{id}?
+    form#formDeleteTask(name="deletetask",method="post",action="/deletetask/#{id}")
+        button#btnSubmit(type="submit") Delete

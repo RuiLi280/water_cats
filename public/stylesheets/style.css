@@ -1,0 +1,43 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;    
+}
+
+h1 {
+    color: #7e191b;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+form, table {
+    width: 33.33%;
+    margin: 0 auto;
+}
+
+form input {
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+form button {
+    border: none;
+    width: 50%;
+    background-color: #7e191b;
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 2em;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table th {
+    text-transform: uppercase;
+}

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1= title
+    p Id: #{id}
+
+    form#formUpdateTask(name="updatetask",method="post",action="/updatetask/#{id}")
+        label(for="inputTaskName") NAME
+        br
+        input#inputTaskName(type="text", value="#{name}", name="taskname")
+        br
+        label(for="inputTaskStatus") STATUS
+        br
+        input#inputTaskStatus(type="text", value="#{status}", name="taskstatus")
+        br
+        label(for="inputTaskPriority") PRIORITY
+        br
+        input#inputTaskPriority(type="text", value="#{priority}", name="taskpriority")
+        br
+        button#btnSubmit(type="submit") Submit

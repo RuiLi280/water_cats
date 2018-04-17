@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1.
+        Task List
+    table
+        tr
+            th name
+            th status
+            th priority
+            th actions
+        each task in tasklist
+            tr
+                td #{task.name} 
+                td #{task.status} 
+                td #{task.priority}
+                td
+                    a(href="tasklist/#{task._id}") View
+                    span  | 
+                    a(href="updatetask/#{task._id}") Edit
+                    span  | 
+                    a(href="deletetask/#{task._id}") Delete
