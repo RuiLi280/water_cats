@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified">
+  <xs:complexType name="task_type">
+    <xs:sequence>
+      <xs:element name="TaskID" type="xs:string"/>
+      <xs:element name="TaskName" type="xs:string"/>
+      <xs:element name="TaskStatus" type="xs:string"/>
+      <xs:element name="TaskPriority" type="xs:integer"/>
+      <xs:element name="PersonID" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="task" type="task_type"/>
+
+  <xs:complexType name="board_type">
+    <xs:sequence>
+      <xs:element ref="task" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="BoardID" type="xs:integer"/>
+      <xs:element name="BoardName" type="xs:string"/>
+      <xs:element name="BoardVisibility" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="board" type="board_type"/>
+
+  <xs:complexType name="project_type">
+    <xs:sequence>
+      <xs:element ref="board" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="project" type="project_type"/>
+</xs:schema>
