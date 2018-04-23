@@ -3,7 +3,7 @@ CREATE DATABASE CIS_water_cats;
 USE CIS_water_cats;
 
 CREATE TABLE person (
-	personID int NOT NULL,
+    personID int NOT NULL,
     firstName varchar(50) NOT NULL,
     lastName varchar(50) NOT NULL,
     email varchar(100) NOT NULL
