@@ -1,0 +1,56 @@
+<project>
+    <board>
+        <BoardName>Water</BoardName>
+        <BoardVisibility>Public</BoardVisibility>
+        <task>
+            <TaskName>Create tables</TaskName>
+            <TaskStatus>To do</TaskStatus>
+            <TaskPriority>1<TaskPriority>
+            <PersonFirstName>Jason</PersonFirstName>
+            <PersonLastName>Kelly</PersonLastName>
+        </task>
+        <task>
+            <TaskName>Create triggers</TaskName>
+            <TaskStatus>In progress</TaskStatus>
+            <TaskPriority>2<TaskPriority>
+            <PersonFirstName>Arthur</PersonFirstName>
+            <PersonLastName>Patterson</PersonLastName>
+        </task>
+        <task>
+            <TaskName>Create ER Diagram</TaskName>
+            <TaskStatus>In Review</TaskStatus>
+            <TaskPriority>3<TaskPriority>
+            <PersonFirstName>Janice</PersonFirstName>
+            <PersonLastName>Jenkinson</PersonLastName>
+        </task>
+    </board>
+    <board>
+        <BoardName>CATS</BoardName>
+        <BoardVisibility>Public</BoardVisibility>
+        <task>
+            <TaskName>Homepage</TaskName>
+            <TaskStatus>In QA</TaskStatus>
+            <TaskPriority>4<TaskPriority>
+            <PersonFirstName>Adam</PersonFirstName>
+            <PersonLastName>Alexandar</PersonLastName>
+        </task>
+        <task>
+            <TaskName>Login</TaskName>
+            <TaskStatus>Done</TaskStatus>
+            <TaskPriority>5<TaskPriority>
+            <PersonFirstName>Robert</PersonFirstName>
+            <PersonLastName>Nelson</PersonLastName>
+        </task>
+    </board>
+    <board>
+        <BoardName>Water Cats</BoardName>
+        <BoardVisibility>Private</BoardVisibility>
+        <task>
+            <TaskName>Assignment 5</TaskName>
+            <TaskStatus>Done</TaskStatus>
+            <TaskPriority>1<TaskPriority>
+            <PersonFirstName>Ron</PersonFirstName>
+            <PersonLastName>Mak</PersonLastName>
+        </task>
+    </board>
+</project>
