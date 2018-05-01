@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS CIS_water_cats;
-CREATE DATABASE CIS_water_cats;
-USE CIS_water_cats;
+DROP DATABASE IF EXISTS watercats;
+CREATE DATABASE watercats;
+USE watercats;
 
 CREATE TABLE person (
     personID int NOT NULL,
