@@ -1,0 +1,125 @@
+use water_cats
+
+db.board.insert([
+{ boardName: "CATS", visibility: "Private", background: null, teamID: 1 },
+{ boardName: "GUI", visibility: "Public", background: null, teamID: 7 },
+{ boardName: "Knapsack", visibility: "Private", background: null, teamID: 6 },
+{ boardName: "SATC", visibility: "Public", background: null, teamID: 2 },
+{ boardName: "TACS", visibility: "Public", background: null, teamID: 3 },
+{ boardName: "TICTACS", visibility: "Private", background: null, teamID: 4 },
+{ boardName: "Water", visibility: "Private", background: null, teamID: 5 }
+])
+
+db.includes.insert([
+	{ teamID: 1, personID: 2 },
+	{ teamID: 1, personID: 3 },
+	{ teamID: 1, personID: 4 },
+	{ teamID: 1, personID: 7 },
+	{ teamID: 2, personID: 2 },
+	{ teamID: 2, personID: 5 },
+	{ teamID: 2, personID: 11 },
+	{ teamID: 2, personID: 13 },
+	{ teamID: 3, personID: 9 },
+	{ teamID: 3, personID: 15 },
+	{ teamID: 4, personID: 1 },
+	{ teamID: 4, personID: 7 },
+	{ teamID: 4, personID: 14 },
+	{ teamID: 5, personID: 5 },
+	{ teamID: 5, personID: 6 },
+	{ teamID: 5, personID: 9 },
+	{ teamID: 5, personID: 15 },
+	{ teamID: 6, personID: 4 },
+	{ teamID: 6, personID: 8 },
+	{ teamID: 6, personID: 11 },
+	{ teamID: 6, personID: 12 },
+	{ teamID: 7, personID: 2 },
+	{ teamID: 7, personID: 10 }	
+])
+
+db.is_assigned.insert([
+	{ projectID: 1, teamID: 1 },
+{ projectID: 1, teamID: 2 },
+{ projectID: 2, teamID: 1 },
+{ projectID: 2, teamID: 4 },
+{ projectID: 2, teamID: 6 },
+{ projectID: 3, teamID: 2 },
+{ projectID: 3, teamID: 3 },
+{ projectID: 3, teamID: 4 },
+{ projectID: 3, teamID: 5 },
+])
+
+db.person.insert([
+	{ personID: 1, email: "jasonk@example.com", password: "password", firstName: "Jason", lastName: "Kelly" },
+	{ personID: 2, email: "arthurp@example.com", password: "password", firstName: "Arthur", lastName: "Patterson" },
+	{ personID: 3, email: "juanj@example.com", password: "password", firstName: "Juan", lastName: "Jones" },
+	{ personID: 4, email: "janicej@example.com", password: "password", firstName: "Janice", lastName: "Jenkins" },
+	{ personID: 5, email: "adama@example.com", password: "password", firstName: "Adam", lastName: "Alexander" },
+	{ personID: 6, email: "robertn@example.com", password: "password", firstName: "Robert", lastName: "Nelson" },
+	{ personID: 7, email: "carolyng@example.com", password: "password", firstName: "Carolyn", lastName: "Green" },
+	{ personID: 8, email: "joyces@example.com", password: "password", firstName: "Joyce", lastName: "Simmons" },
+	{ personID: 9, email: "amandab@example.com", password: "password", firstName: "Amanda", lastName: "Butler" },
+	{ personID: 10, email: "dianah@example.com", password: "password", firstName: "Diana", lastName: "Henderson" },
+	{ personID: 11, email: "carolp@example.com", password: "password", firstName: "Carol", lastName: "Powell" },
+	{ personID: 12, email: "erict@example.com", password: "password", firstName: "Eric", lastName: "Thompson" },
+	{ personID: 13, email: "heleng@example.com", password: "password", firstName: "Helen", lastName: "Gray" },
+	{ personID: 14, email: "kathrynm@example.com", password: "password", firstName: "Kathryn", lastName: "Moore" },
+	{ personID: 15, email: "amya@example.com", password: "password", firstName: "Amy", lastName: "Allen" }
+])
+
+db.person_specialization.insert([
+	{ specialization: "Back-end", personID: 4 },
+	{ specialization: "Back-end", personID: 7 },
+	{ specialization: "Back-end", personID: 8 },
+	{ specialization: "Back-end", personID: 12 },
+	{ specialization: "Databases", personID: 9 },
+	{ specialization: "Databases", personID: 15 },
+	{ specialization: "Design", personID: 10 },
+	{ specialization: "Front-end", personID: 2 },
+	{ specialization: "Front-end", personID: 5 },
+	{ specialization: "Front-end", personID: 13 },
+	{ specialization: "Full-stack", personID: 6 },
+	{ specialization: "Full-stack", personID: 11 },
+	{ specialization: "IT", personID: 14 },
+	{ specialization: "Project Management", personID: 1 },
+	{ specialization: "Quality Assurance", personID: 3 }
+])
+
+db.project.insert([
+	{ projectName: "Kitty Farm", projectID: 1, projectDescription: "Cat adoption center", projectDue: "2018-03-14", projectStatus: "Inactive" },
+	{ projectName: "SeaS", projectID: 2, projectDescription: "Find water", projectDue: "2018-02-17", projectStatus: "Inactive" },
+	{ projectName: "Jello", projectID: 3, projectDescription: "Trello hello", projectDue: "2018-05-29", projectStatus: "Active" }
+])
+
+db.project_category.insert([
+	{ category: "DBMS", projectID: 1 },
+	{ category: "Mobile Application", projectID: 3 }
+])
+
+db.task.insert([
+{ taskID: 1, priority: 1, taskStatus: "In code review", taskDescription: "Create API", taskDue: "2018-02-17", assignDate: "2018-02-10", personID: 7, boardName: "CATS" },
+{ taskID: 2, priority: 1, taskStatus: "In progress", taskDescription: "Code review for Task 1", taskDue: "2018-02-14", assignDate: "2018-02-14", personID: 4, boardName: "CATS" },
+{ taskID: 3, priority: 1, taskStatus: "In QA", taskDescription: "Implement UI", taskDue: "2018-02-10", assignDate: "2018-01-20", personID: 2, boardName: "CATS" },
+{ taskID: 4, priority: 1, taskStatus: "To do", taskDescription: "QA for Task 3", taskDue: "2018-02-15", assignDate: "2018-02-10", personID: 3, boardName: "CATS" },
+{ taskID: 5, priority: 1, taskStatus: "Done", taskDescription: "Apply changes to schema", taskDue: "2018-01-06", assignDate: "2018-01-05", personID: 15, boardName: "Water" },
+{ taskID: 6, priority: 3, taskStatus: "To do", taskDescription: "Create alternative mockups", taskDue: "2018-02-20", assignDate: "2018-02-13", personID: 10, boardName: "GUI" },
+{ taskID: 7, priority: 4, taskStatus: "In progress", taskDescription: "Bug fix", taskDue: "2018-02-15", assignDate: "2018-02-14", personID: 11, boardName: "SATC" }
+])
+
+db.task_type.insert([
+	{ taskType: "Bug", taskID: 6 },
+	{ taskType: "Code review", taskID: 2 },
+	{ taskType: "Implementation", taskID: 3 },
+	{ taskType: "Modification", taskID: 5 },
+	{ taskType: "QA", taskID: 4 },
+	{ taskType: "Setup", taskID: 1 }
+])
+
+db.team.insert([
+	{ teamName: "CATS", teamID: 1, focus: "Database Management" },
+	{ teamName: "SATC", teamID: 2, focus: "Front-end" },
+	{ teamName: "TACS", teamID: 3, focus: "Quality Assurance" },
+	{ teamName: "TICTACS", teamID: 4, focus: "Release" },
+	{ teamName: "Water", teamID: 5, focus: "Database Management" },
+	{ teamName: "Knapsack", teamID: 6, focus: "Back-end" },
+	{ teamName: "GUI", teamID: 7, focus: "UI Design" }
+])
