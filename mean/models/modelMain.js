@@ -33,7 +33,6 @@ module.exports.get_teamlist = function(req, res)
     team.find({}, {},
         function(err, docs)
         {
-            console.log(docs);
             res.render('teamlist', { "teamlist" : docs });
         });
 };
@@ -79,6 +78,7 @@ module.exports.post_addtask = function(req, res)
     var taskName = req.body.taskname;
     var taskPriority = req.body.taskpriority;
     var taskStatus = req.body.taskstatus;
+    var taskDue = req.body.taskdue;
 
     // Set our collection.
     var collection = db.get('task');
@@ -86,7 +86,8 @@ module.exports.post_addtask = function(req, res)
     // Submit to the database.
     collection.insert( { "taskDescription" : taskName,
                          "priority" : taskPriority,
-                         "taskStatus": taskStatus },
+                         "taskStatus": taskStatus,
+                         "taskDue": taskDue },
                        function (err, doc) 
                        {
                            if (err) {
@@ -158,8 +159,6 @@ module.exports.post_updatetask = function(req, res)
     var taskId = req.params.taskid;
     var db = req.db;
     var collection = db.get('task');
-
-    console.log(req.body);
 
     // Submit to the database.
     collection.update( { "_id" : taskId }, { $set: {
