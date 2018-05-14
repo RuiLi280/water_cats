@@ -51,3 +51,13 @@ router.get('/updatetask/:taskid', modelMain.get_updatetask);
 router.post('/updatetask/:taskid', modelMain.post_updatetask);
 
 module.exports = router;
+
+/*
+ * GET team list page.
+ */
+router.get('/teamlist', modelMain.get_teamlist);
+
+/*
+ * GET show team page.
+ */
+router.get('/teamlist/:teamid', modelMain.get_showteam);

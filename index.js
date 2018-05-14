@@ -8,7 +8,7 @@ var app = express();
 //Database setup
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/project');
+var db = monk('localhost:27017/water_cats');
 app.use(function(req, res, next) {
     req.db = db;
     next();

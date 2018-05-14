@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= title
+    p Focus: #{focus}
+    h3 Team Members
+    each member in members
+        p #{member.firstName} #{member.lastName}

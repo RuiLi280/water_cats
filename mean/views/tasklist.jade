@@ -8,12 +8,14 @@ block content
             th name
             th status
             th priority
+            th due date
             th actions
         each task in tasklist
             tr
-                td #{task.name} 
-                td #{task.status} 
+                td #{task.taskDescription}
+                td #{task.taskStatus}
                 td #{task.priority}
+                td #{task.taskDue}
                 td
                     a(href="tasklist/#{task._id}") View
                     span  | 

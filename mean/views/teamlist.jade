@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1.
+        Team List
+    each team in teamlist
+        p
+            a(href='/teamlist/#{team._id}') #{team.teamName}

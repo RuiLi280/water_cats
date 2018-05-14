@@ -24,6 +24,21 @@ module.exports.get_tasklist = function(req, res)
 };
 
 /*
+ * GET task list page.
+ */
+module.exports.get_teamlist = function(req, res)
+{
+    var db = req.db;
+    var team = db.get('team');
+    team.find({}, {},
+        function(err, docs)
+        {
+            console.log(docs);
+            res.render('teamlist', { "teamlist" : docs });
+        });
+};
+
+/*
  * GET show task page.
  */
 module.exports.get_showtask = function(req, res) 
@@ -41,10 +56,12 @@ module.exports.get_showtask = function(req, res)
             else {
                 res.render('showtask', 
                     {   
-                        title: 'Show task: ' + doc[0].name,
+                        title: 'Show task: ' + doc[0].taskDescription,
                         id: doc[0]._id,
                         priority: doc[0].priority,
-                        status: doc[0].status,
+                        status: doc[0].taskStatus,
+                        assignDate: doc[0].assignDate,
+                        dueDate: doc[0].taskDue,
                     })
             }
         });
@@ -67,9 +84,9 @@ module.exports.post_addtask = function(req, res)
     var collection = db.get('task');
 
     // Submit to the database.
-    collection.insert( { "name" : taskName,
+    collection.insert( { "taskDescription" : taskName,
                          "priority" : taskPriority,
-                         "status": taskStatus },
+                         "taskStatus": taskStatus },
                        function (err, doc) 
                        {
                            if (err) {
@@ -124,10 +141,10 @@ module.exports.get_updatetask = function(req, res)
                 res.render('updatetask', 
                     {   
                         title: 'Update task',
-                        name: doc[0].name,
+                        name: doc[0].taskDescription,
                         id: doc[0]._id,
                         priority: doc[0].priority,
-                        status: doc[0].status,
+                        status: doc[0].taskStatus,
                     })
             }
         });
@@ -145,7 +162,11 @@ module.exports.post_updatetask = function(req, res)
     console.log(req.body);
 
     // Submit to the database.
-    collection.update( { "_id" : taskId }, { name: req.body.taskname, priority: req.body.taskpriority, status: req.body.taskstatus },
+    collection.update( { "_id" : taskId }, { $set: {
+                            taskDescription: req.body.taskname,
+                            priority: req.body.taskpriority,
+                            taskStatus: req.body.taskstatus,
+                        } },
                        function (err, doc) 
                        {
                            if (err) {
@@ -156,4 +177,39 @@ module.exports.post_updatetask = function(req, res)
                                res.redirect("/tasklist");
                            }
                        });
+};
+
+/*
+ * GET show team page.
+ */
+module.exports.get_showteam = function(req, res)
+{
+    var teamid = req.params.teamid;
+    var db = req.db;
+    var team = db.get('team');
+    var includes = db.get('includes');
+    var person = db.get('person');
+
+    team.findOne( {_id: teamid}, function(err, team) {
+        includes.find( { teamID: team.teamID }, { _id: 0, personID: 1 }, function(err, memberIds) {
+            memberIds = memberIds.map(function(memberId) {
+                return memberId.personID;
+            });
+            person.find( { personID: {$in: memberIds} }, function(err, members) {
+                    if (err) {
+                        res.send("Find failed.");
+                    }
+                    else {
+                        res.render('showteam',
+                            {
+                                title: team.teamName,
+                                focus: team.focus,
+                                members: members
+                            });
+                    }
+
+            });
+        });
+    });
+
 };

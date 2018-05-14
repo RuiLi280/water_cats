@@ -9,8 +9,15 @@ h1 {
 }
 
 form, table {
-    width: 33.33%;
     margin: 0 auto;
+}
+
+form {
+    width: 33.33%;
+}
+
+table {
+    width: 50%;
 }
 
 form input {
